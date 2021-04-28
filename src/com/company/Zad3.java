@@ -5,6 +5,8 @@ import java.util.*;
 public class Zad3 {
     public static void main(String[] args) {
 
+        //1 sposób, z wykorzystaniem Mapy, drugi opisany w książce
+
         Map<Integer, Integer> numbers = new TreeMap<>();       // wykorzystujemy mapę <Key- to będzie nasza liczba, Value - to ilość wystąpień>
                                                                // a TreeMap używamy, żeby wyświetlać winik odrazu posortowany
         List<Integer> list = new ArrayList<>();                // wprowadzamy nasze dane jako listę korzystając z wcześniejszej metody

@@ -32,15 +32,15 @@ public class CollectionInit {
     static Map<String, String> dictionaryInput(Map<String, String> map) {
         Map<String, String> dictionary = new TreeMap<>();
         System.out.println("Wprowadź słowo po polsku, po enterze tłumaczenie");
-        String safetyWord = "end input";
+
         String polWord;
         String foreignWord;
         do {
-            polWord = scanner.nextLine();
-            foreignWord = scanner.nextLine();
+            polWord = scanner.next().toLowerCase();
+            foreignWord = scanner.next().toLowerCase();
             dictionary.put(polWord, foreignWord);
-        } while (polWord != safetyWord);
-
+        } while (!polWord.equalsIgnoreCase("end"));
+        dictionary.remove("end");
         return dictionary;
     }
 }
