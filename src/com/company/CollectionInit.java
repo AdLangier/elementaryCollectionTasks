@@ -1,9 +1,7 @@
 package com.company;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class CollectionInit {
     static Scanner scanner = new Scanner(System.in);
@@ -29,5 +27,20 @@ public class CollectionInit {
             userList.add(scanner.next());
         }
         return userList;
+    }
+
+    static Map<String, String> dictionaryInput(Map<String, String> map) {
+        Map<String, String> dictionary = new TreeMap<>();
+        System.out.println("Wprowadź słowo po polsku, po enterze tłumaczenie");
+        String safetyWord = "end input";
+        String polWord;
+        String foreignWord;
+        do {
+            polWord = scanner.nextLine();
+            foreignWord = scanner.nextLine();
+            dictionary.put(polWord, foreignWord);
+        } while (polWord != safetyWord);
+
+        return dictionary;
     }
 }
